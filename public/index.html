@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parcial 2</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body onload="cargaInicial()">
+
+
+
+    <!-- nav bar-->
+    <nav class="navbar">
+        <img src="img/logo.png" onclick="openNav()" class="logo" alt="" />
+        <div class="join-box">
+            <p class="join-msg">Ilimitado TV shows & Pelis</p>
+            <button class="btn join-btn">Suscribase hoy</button>
+            <button class="btn" onlclick="getElementClicked(this)">Ingresar</button>
+
+            <!-- lenguaje a mostrar -->
+            <select id="language" onchange="reloadOnSelect()">
+                <option value="es" selected>Español</option>
+                <option value="en">Ingles</option>
+            </select>
+        </div>
+    </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="sidenav-element"><br />
+            <br />
+            <br />
+        </div>
+        <div class="sidenav-element">
+            <h1>Selecciona los generos</h1>
+            <div id="genres" class="checkclass">
+            </div>
+        </div>
+        <div class="sidenav-element">
+            <h1>Año:</h1>
+            <select id="year">
+                <option value="2001" selected>2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+            </select>
+        </div>
+        <div class="sidenav-element">
+            <h1>Clasificación:</h1>
+            <select id="classification">
+            </select>
+        </div>
+        <div class="sidenav-element">
+            <button class="btn-filter join-btn" onclick="cargarPeliculasConFiltro()">Filtrar</button>
+        </div>
+
+    </div>
+    <div id="main">
+        <!-- SEccion principal-->
+        <div class="recommendations">
+            <h1 class="heading">Pelis</h1>
+            <p class="info">
+                Las mejores pelis de la Red, series y cosas para quitar el tiempo, todo esta aqui
+            </p>
+        </div>
+        <header id="principal" class="main">
+
+        </header>
+
+        <!-- recommendations -->
+        <div class="recommendations">
+            <h1 class="heading">Peliculas de Estreno!</h1>
+        </div>
+        <header class="main" id="main-cinema">
+
+        </header>
+        <div class="recommendations">
+            <h1 class="heading">Peliculas de Adultos con mejores calificaciones!</h1>
+        </div>
+        <header class="main" id="main-r">
+
+        </header>
+        <div class="recommendations">
+            <h1 class="heading">TV Shows!</h1>
+        </div>
+        <header class="main" id="main-tvshows">
+
+        </header>
+    </div>
+    <!-- se hacen la referncia a los JS en este orden -->
+    <script src="js/api.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/scroll.js"></script>
+</body>
+
+</html>
